@@ -12,11 +12,38 @@ import {SITE_TITLE, SITE_DESCRIPTION} from '../config';
   </head>
   <body>
     <Header title={SITE_TITLE} />
-    <main>
-      <p>
-        My main research interests are in applications of holography enabled by computing power, e.g. 3D display, phase imaging, and optical computing.
-      </p>
-    </main>
+    <div class="profile">
+      <img src="/images/yendo.jpg" alt="Profile image" />
+      <ul>
+        <li>Yutaka Endo (遠藤 優)</li>
+        <li><a href="https://mech.w3.kanazawa-u.ac.jp/en/" target="_blank">Institute of Science and Engineering</a></li>
+        <li><a href="https://www.kanazawa-u.ac.jp/e/" target="_blank">Kanazawa University</a></li>
+        <li>Assistant Professor</li>
+        <li><i class="fa-solid fa-envelope"></i> endo@se.kanazawa-u.ac.jp</li>
+        <li>
+          <a href="https://github.com/ytkend" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a href="https://orcid.org/0000-0002-7985-8880" target="_blank"><i class="ai ai-orcid"></i></a>
+          <a href="https://scholar.google.com/citations?user=mpE1S3gAAAAJ" target="_blank"><i class="ai ai-google-scholar-square"></i></a>
+        </li>
+      </ul>
+    </div>
     <Footer />
   </body>
 </html>
+<style>
+  .profile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .profile img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+  }
+  .profile ul {
+    list-style-type: none;
+    padding: 15px;
+  }
+</style>
