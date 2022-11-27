@@ -1,0 +1,40 @@
+---
+const {start, end, text} = Astro.props;
+
+const startDate = new Date(start).toLocaleDateString('ja-JP', {
+  year: 'numeric',
+  month: '2-digit',
+});
+
+let period;
+if (end == undefined) {
+  period = startDate;
+} else if (end == 'present') {
+  period = startDate + '–' + 'present';
+} else {
+  const endDate = new Date(end).toLocaleDateString('ja-JP', {
+    year: 'numeric',
+    month: '2-digit',
+  });
+  period = startDate + '–' + endDate;
+}
+---
+<tr>
+  <th>{period}</th>
+  <td>{text}</td>
+</tr>
+<style>
+  th {
+    vertical-align: top;
+    width: 180px;
+  }
+  td {
+    vertical-align: top;
+  }
+  @media screen and (max-width: 65ch) {
+    th, td {
+      display: block;
+      width: 100%;
+    }
+  }
+</style>

@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import ProfileItem from '../components/ProfileItem.astro';
 import {SITE_TITLE, SITE_DESCRIPTION} from '../config';
 ---
 
@@ -15,9 +16,46 @@ import {SITE_TITLE, SITE_DESCRIPTION} from '../config';
     <h1>Profile</h1>
     <main>
       <h2>Experience</h2>
+        <table>
+          <tbody>
+            <ProfileItem start="2022-04" end="2023-03" text="Visiting Academic Fellow, University of Cambridge, UK" />
+            <ProfileItem start="2017-04" end="present" text="Assistant Professor, Kanazawa University, Japan" />
+            <ProfileItem start="2014-11" end="2017-03" text="Research Assistant of the ImPACT Program, Chiba University, Japan" />
+            <ProfileItem start="2013-04-05" end="2013-04-12" text="Visitor at the Robotics Institute, Carnegie Mellon University, USA" />
+          </tbody>
+        </table>
       <h2>Education</h2>
+        <table>
+          <tbody>
+            <ProfileItem start="2014-04" end="2017-03" text="PhD in Engineering, Chiba University, Japan" />
+            <ProfileItem start="2012-04" end="2014-03" text="MS in Engineering, Chiba University, Japan" />
+            <ProfileItem start="2008-04" end="2012-03" text="BS in Engineering, Chiba University, Japan" />
+          </tbody>
+        </table>
       <h2>Grants and Awards</h2>
+        <table>
+          <tbody>
+            <ProfileItem start="2022-04" end="2025-03" text="Grant-in-Aid for Early-Career Scientists (Principal Investigator), 22K17908, JSPS" />
+            <ProfileItem start="2018-04" end="2022-03" text="Grant-in-Aid for Scientific Research(B) (Co-Investigator), 18H03257, JSPS" />
+            <ProfileItem start="2019-11" end="2021-06" text="Reserch Grant from Kayamori Foundation of Informational Science Advancement, K31-XXIV-543" />
+            <ProfileItem start="2020-04" end="2021-03" text="Hokuriku Bank Research Grant for Young Scientists" />
+            <ProfileItem start="2019-10" end="2021-03" text="Research Grant from The Matsuda Foundation, No. 19KK-271" />
+            <ProfileItem start="2019-04" end="2021-03" text="Grant-in-Aid for Early-Career Scientists (Principal Investigator), 19K20293, JSPS" />
+            <ProfileItem start="2018-05" text="The 8-th Suzuki-Okada Memorial Prize Technology Award, HODIC" />
+            <ProfileItem start="2016-11" text="Konica Minolta Hikari Mirai Student Award, The Optical Society of Japan" />
+            <ProfileItem start="2016-07" text="Program to Support Sending Graduate Students Abroad (Short term), Chiba University" />
+            <ProfileItem start="2015-05" text="Grants for Attendees at International Conferences (1st half of Fiscal 2015), NEC C&amp;C Foundation" />
+            <ProfileItem start="2015-04" text="Program to Support Sending Graduate Students Abroad (Short term), Chiba University" />
+            <ProfileItem start="2013.03" text="LSI Design Contest 2013 SIS Award" />
+          </tbody>
+        </table>
     </main>
     <Footer />
   </body>
 </html>
+<style>
+  ul {
+    list-style-type: none;
+    padding: unset;
+  }
+</style>
